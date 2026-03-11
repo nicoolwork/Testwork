@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ExternalDataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="af225da6-f430-48c2-aa80-4754be7de7a9">
+  <producedTypes>
+    <objectType typeId="583891c8-24b9-4115-b3b4-75d4984e4367" valueTypeId="3bf37f6e-5474-4a77-847b-9efef9824db5"/>
+  </producedTypes>
+  <name>ВнешняяОбработкаТЗ_effectmobile_ru</name>
+  <synonym>
+    <key>ru</key>
+    <value>Внешняя обработка ТЗ effectmobile.ru</value>
+  </synonym>
+  <containedObjects classId="c3831ec8-d8d5-4f93-8a22-f9bfae07327f" objectId="2e7685a0-1048-40f8-a762-6b7d6eccd939"/>
+  <defaultForm>ExternalDataProcessor.ВнешняяОбработкаТЗ_effectmobile_ru.Form.Форма</defaultForm>
+  <attributes uuid="4d5a885d-e013-41da-9fd1-35ac4aabbb2d">
+    <name>ДатаОтправки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата отправки</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="641a6940-08b0-4389-9471-85ea617140de">
+    <name>УсловиеИсключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Условие исключения</value>
+    </synonym>
+    <comment>служебный реквизит</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>500</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="b8207a9f-b530-40cf-a441-57b2f0d631fd">
+    <name>ОператорСравнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Оператор сравнения</value>
+    </synonym>
+    <comment>Укажите &quot;Равно&quot; или &quot;Не равно&quot;</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="4de57d43-584c-4d5f-a2ff-a692c60f0c64">
+    <name>ХарактеристикаДатыСравнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Характеристика даты сравнения</value>
+    </synonym>
+    <comment>Сравниваем с &quot;Min&quot; или &quot;Max&quot; датой?</comment>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <tabularSections uuid="db13c348-1be7-4b06-b6c8-56658859f737">
+    <producedTypes>
+      <objectType typeId="2620790f-91b4-47bd-9190-db6391a5a369" valueTypeId="0f8ebc1f-2523-4f79-80ed-abd4be2cf8f7"/>
+      <rowType typeId="d0082ea3-e149-4ac0-b7f8-cc0991fbef2f" valueTypeId="e8ba25f3-5751-495d-be59-76947e261d90"/>
+    </producedTypes>
+    <name>ТаблицаНужныеВедомости</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица нужные ведомости</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="0c59bbef-b312-49e8-86bc-a41edb36fdcf">
+      <name>Ведомость</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ведомость</value>
+      </synonym>
+      <type>
+        <types>DocumentRef.Ведомость</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillFromFillingValue>true</fillFromFillingValue>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d218f8aa-88aa-4b32-9389-7488e35e380b">
+      <name>АктуальныйСтатус</name>
+      <synonym>
+        <key>ru</key>
+        <value>Актуальный статус</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СтатусыДокументов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="9f657041-83b9-41c6-8155-699a6ea5c47b">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="c1aa8b83-737a-4ee6-88ac-d188b4453036">
+    <name>ИнформацияДляПользователя</name>
+    <synonym>
+      <key>ru</key>
+      <value>Информация для пользователя</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:ExternalDataProcessor>
