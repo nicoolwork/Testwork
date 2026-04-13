@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДатаОтправки" id="26">
+			<DataPath>Объект.ДатаОтправки</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаОтправкиКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ДатаОтправкиРасширеннаяПодсказка" id="28"/>
+			<Events>
+				<Event name="OnChange">ДатаПроверкиПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="Группа2" id="29">
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="30"/>
+			<ChildItems>
+				<RadioButtonField name="ОператорСравнения" id="31">
+					<DataPath>Объект.ОператорСравнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите оператор сравнения</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Равно</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Не равно</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ОператорСравненияКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ОператорСравненияРасширеннаяПодсказка" id="33"/>
+				</RadioButtonField>
+				<RadioButtonField name="ХарактеристикаДатыСравнения" id="34">
+					<DataPath>Объект.ХарактеристикаДатыСравнения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Укажите с какой датой сравниваем</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Min</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation/>
+								<Value xsi:type="xs:string">Max</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ХарактеристикаДатыСравненияКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ХарактеристикаДатыСравненияРасширеннаяПодсказка" id="36"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="5">
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="6"/>
+			<ChildItems>
+				<Button name="ЗаполнитьНужное" id="1">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьНужное</CommandName>
+					<ExtendedTooltip name="ЗаполнитьНужноеРасширеннаяПодсказка" id="2"/>
+				</Button>
+				<Button name="УдалитьЛишнее" id="3">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.УдалитьЛишнее</CommandName>
+					<ExtendedTooltip name="УдалитьЛишнееРасширеннаяПодсказка" id="4"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа3</v8:content>
+				</v8:item>
+			</Title>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="63"/>
+			<ChildItems>
+				<Table name="ТаблицаНужныеВедомости" id="96">
+					<Representation>List</Representation>
+					<Visible>false</Visible>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.ТаблицаНужныеВедомости</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаНужныеВедомостиКонтекстноеМеню" id="98"/>
+					<AutoCommandBar name="ТаблицаНужныеВедомостиКоманднаяПанель" id="97"/>
+					<ExtendedTooltip name="ТаблицаНужныеВедомостиРасширеннаяПодсказка" id="99"/>
+					<SearchStringAddition name="ТаблицаНужныеВедомостиСтрокаПоиска" id="100">
+						<AdditionSource>
+							<Item>ТаблицаНужныеВедомости</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНужныеВедомостиСтрокаПоискаКонтекстноеМеню" id="101"/>
+						<ExtendedTooltip name="ТаблицаНужныеВедомостиСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаНужныеВедомостиСостояниеПросмотра" id="106">
+						<AdditionSource>
+							<Item>ТаблицаНужныеВедомости</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНужныеВедомостиСостояниеПросмотраКонтекстноеМеню" id="107"/>
+						<ExtendedTooltip name="ТаблицаНужныеВедомостиСостояниеПросмотраРасширеннаяПодсказка" id="108"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаНужныеВедомостиУправлениеПоиском" id="103">
+						<AdditionSource>
+							<Item>ТаблицаНужныеВедомости</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаНужныеВедомостиУправлениеПоискомКонтекстноеМеню" id="104"/>
+						<ExtendedTooltip name="ТаблицаНужныеВедомостиУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<InputField name="ТаблицаНужныеВедомостиНомерСтроки" id="109">
+							<DataPath>Объект.ТаблицаНужныеВедомости.LineNumber</DataPath>
+							<ContextMenu name="ТаблицаНужныеВедомостиНомерСтрокиКонтекстноеМеню" id="110"/>
+							<ExtendedTooltip name="ТаблицаНужныеВедомостиНомерСтрокиРасширеннаяПодсказка" id="111"/>
+						</InputField>
+						<InputField name="ТаблицаНужныеВедомостиВедомость" id="112">
+							<DataPath>Объект.ТаблицаНужныеВедомости.Ведомость</DataPath>
+							<ContextMenu name="ТаблицаНужныеВедомостиВедомостьКонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ТаблицаНужныеВедомостиВедомостьРасширеннаяПодсказка" id="114"/>
+						</InputField>
+						<InputField name="ТаблицаНужныеВедомостиДата" id="115">
+							<DataPath>Объект.ТаблицаНужныеВедомости.ДатаВедомости</DataPath>
+							<ContextMenu name="ТаблицаНужныеВедомостиДатаКонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ТаблицаНужныеВедомостиДатаРасширеннаяПодсказка" id="117"/>
+						</InputField>
+						<InputField name="ТаблицаНужныеВедомостиАктуальныйСтатус" id="118">
+							<DataPath>Объект.ТаблицаНужныеВедомости.СтатусВедомости</DataPath>
+							<ContextMenu name="ТаблицаНужныеВедомостиАктуальныйСтатусКонтекстноеМеню" id="119"/>
+							<ExtendedTooltip name="ТаблицаНужныеВедомостиАктуальныйСтатусРасширеннаяПодсказка" id="120"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ВнешняяОбработкаТЗ_effectmobile_ru</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьНужное" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нужное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить нужное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНужное</Action>
+		</Command>
+		<Command name="УдалитьЛишнее" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить лишнее</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить лишнее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьЛишнее</Action>
+		</Command>
+	</Commands>
+</Form>

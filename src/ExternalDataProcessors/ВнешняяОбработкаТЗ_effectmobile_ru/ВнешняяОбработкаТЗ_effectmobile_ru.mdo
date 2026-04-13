@@ -76,25 +76,17 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
   </attributes>
-  <tabularSections uuid="db13c348-1be7-4b06-b6c8-56658859f737">
+  <tabularSections uuid="44ff16c5-890b-4389-ae72-46ac93642d23">
     <producedTypes>
-      <objectType typeId="2620790f-91b4-47bd-9190-db6391a5a369" valueTypeId="0f8ebc1f-2523-4f79-80ed-abd4be2cf8f7"/>
-      <rowType typeId="d0082ea3-e149-4ac0-b7f8-cc0991fbef2f" valueTypeId="e8ba25f3-5751-495d-be59-76947e261d90"/>
+      <objectType typeId="692af673-ed11-45f0-98d9-da99c7650019" valueTypeId="f6f3bdb8-942a-40e7-b1d4-a94b4ccef86a"/>
+      <rowType typeId="2fe9817e-c935-47b5-bcdc-6189be762c22" valueTypeId="bd4c04ec-ff75-4a26-9a73-3bdd59d551d4"/>
     </producedTypes>
     <name>ТаблицаНужныеВедомости</name>
     <synonym>
       <key>ru</key>
       <value>Таблица нужные ведомости</value>
     </synonym>
-    <standardAttributes>
-      <dataHistory>Use</dataHistory>
-      <name>LineNumber</name>
-      <fillValue xsi:type="core:UndefinedValue"/>
-      <fullTextSearch>Use</fullTextSearch>
-      <minValue xsi:type="core:UndefinedValue"/>
-      <maxValue xsi:type="core:UndefinedValue"/>
-    </standardAttributes>
-    <attributes uuid="0c59bbef-b312-49e8-86bc-a41edb36fdcf">
+    <attributes uuid="4ce2d689-fa07-485a-958a-4a5a51365b52">
       <name>Ведомость</name>
       <synonym>
         <key>ru</key>
@@ -105,21 +97,63 @@
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillFromFillingValue>true</fillFromFillingValue>
-      <fillValue xsi:type="core:UndefinedValue"/>
     </attributes>
-    <attributes uuid="d218f8aa-88aa-4b32-9389-7488e35e380b">
-      <name>АктуальныйСтатус</name>
+    <attributes uuid="df0c791b-4bec-4fc8-bd3c-e4ccf517e31b">
+      <name>ДатаВедомости</name>
       <synonym>
         <key>ru</key>
-        <value>Актуальный статус</value>
+        <value>Дата ведомости</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bba1ffd1-0539-457a-8f70-1042fc405507">
+      <name>СтатусВедомости</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статус ведомости</value>
       </synonym>
       <type>
         <types>EnumRef.СтатусыДокументов</types>
       </type>
       <minValue xsi:type="core:UndefinedValue"/>
       <maxValue xsi:type="core:UndefinedValue"/>
-      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d948f1c8-3ec0-47e5-acc6-79eb7f332257">
+      <name>НомерВедомости</name>
+      <synonym>
+        <key>ru</key>
+        <value>Номер ведомости</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>15</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="41cdd3b4-fd37-41a0-94c3-091b491c0ba0">
+      <name>КоличествоДоговоров</name>
+      <synonym>
+        <key>ru</key>
+        <value>Количество договоров</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
     </attributes>
   </tabularSections>
   <forms uuid="9f657041-83b9-41c6-8155-699a6ea5c47b">
