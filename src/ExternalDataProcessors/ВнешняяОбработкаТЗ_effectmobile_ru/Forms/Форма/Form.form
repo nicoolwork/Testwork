@@ -534,6 +534,10 @@
         <horizontalAlign>Left</horizontalAlign>
       </autoCommandBar>
       <handlers>
+        <event>Selection</event>
+        <name>ТаблицаНужныеВедомостиВыбор</name>
+      </handlers>
+      <handlers>
         <event>OnActivateCell</event>
         <name>ТаблицаНужныеВедомостиПриАктивизацииЯчейки</name>
       </handlers>
